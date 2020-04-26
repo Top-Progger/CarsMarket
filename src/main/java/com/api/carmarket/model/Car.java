@@ -13,5 +13,6 @@ public class Car {
     private String category;
     private String bodyType;
     private String modification;
-    private boolean isDamaged;
+    private Options options;
+    private String description;
 }

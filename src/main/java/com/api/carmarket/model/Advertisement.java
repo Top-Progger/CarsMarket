@@ -23,6 +23,7 @@ public class Advertisement {
     private boolean isExchangePossible;
     private boolean isExchangeForRealtyPossible;
     private int price;
+    private String currency;
     private Car car;
     private boolean isModerated;
 }

@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Advertisement",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "location": {
+      "$ref": "#/definitions/location"
+    },
+    "isAuctionPossible": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isExchangePossible": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isExchangeForRealtyPossible": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "price": {
+      "type": "number"
+    },
+    "car": {
+      "$ref": "#/definitions/car"
+    }
+  },
+  "required": [
+    "userId",
+    "location",
+    "price",
+    "car"
+  ],
+  "definitions": {
+    "location": {
+      "title": "Location",
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "region",
+        "city"
+      ]
+    },
+    "car": {
+      "title": "Car",
+      "type": "object",
+      "properties": {
+        "brand": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "mileage": {
+          "type": "integer"
+        },
+        "category": {
+          "type": "string"
+        },
+        "bodyType": {
+          "type": "string"
+        },
+        "modification": {
+          "type": "string"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "options": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "$ref": "#/definitions/options"
+        }
+      },
+      "required": [
+        "brand",
+        "model",
+        "year",
+        "mileage",
+        "category",
+        "bodyType",
+        "modification"
+      ]
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "isDamaged": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "isCustomCleared": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "VIN": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "gearBoxType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "drive": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fuelType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Diesel",
+            "Gasoline",
+            "Gasoline/Gas",
+            "Hybrid",
+            "Electric",
+            "Methane",
+            "propane-butane",
+            "Other"
+          ]
+        },
+        "fuelConsumptionInCity": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "fuelConsumptionInRoute": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "combineModeFuelConsumption": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "engineVolume": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "horsePowers": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "kiloWatts": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

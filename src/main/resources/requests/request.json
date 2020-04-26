@@ -1,0 +1,23 @@
+{
+  "userId": "ttt1-414551-123fd",
+  "location": {
+    "region": "Kyiv Region",
+    "city": "Irpin"
+  },
+  "price": 4000,
+  "currency": "$",
+  "car": {
+    "brand": "Volkswagen",
+    "model": "Golf IV",
+    "year": 2001,
+    "mileage": 195000,
+    "category": "Passenger transport",
+    "bodyType": "Hatchback",
+    "modification": "Comfort",
+    "options": {
+      "isDamaged": false,
+      "fuelType": "Diesel",
+      "engineVolume": 1.9
+    }
+  }
+}
